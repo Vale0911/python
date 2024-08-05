@@ -11,6 +11,6 @@ asis_cobrohora = int(input("Cuánto se cobra por cada hora de asistente?:"))
 
 subtotal_investigadores=investigadores*Horas_semanales*meses*inves_cobrohora+0.3
 subtotal_asistentes=Asistentes*Horas_semanales*meses*asis_cobrohora+0.3
-total_proyeccion=subtotal_investigadores+subtotal_asistentes+0.19
+total_proyeccion=subtotal_investigadores+subtotal_asistentes+1.21
 
 print("El presupuesto total para la proyección es",total_proyeccion)
