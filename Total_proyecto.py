@@ -39,7 +39,7 @@ valor_alojamiento= int(input("Ingrese el valor del alojamiento por noche:"))
 float; total_alojamiento= Cantidad_personas_viaje*numero_dias_viaje*valor_alojamiento
 
 float; total_viajes=costototal_tiquetes+total_alojamiento
-print("El costo total de viajes es:",total_viajes)
+print("El costo total de los viajes es:",total_viajes)
 
 float; ganancia =0.3;
 Valor_total_proyeccion=total_talento+total_equipos+total_viajes
