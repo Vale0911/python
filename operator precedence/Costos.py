@@ -9,8 +9,8 @@ meses = int(input("Cuántos meses se planea la proyección?:"))
 inves_cobrohora = int(input("Cuánto se cobra por cada hora de investigador?:"))
 asis_cobrohora = int(input("Cuánto se cobra por cada hora de asistente?:"))
 
-subtotal_investigadores=investigadores*Horas_semanales*meses*inves_cobrohora+0.3
-subtotal_asistentes=Asistentes*Horas_semanales*meses*asis_cobrohora+0.3
-total_proyeccion=subtotal_investigadores+subtotal_asistentes+0.19
+float; subtotal_investigadores=investigadores*Horas_semanales*meses*inves_cobrohora+0.3
+float; subtotal_asistentes=Asistentes*Horas_semanales*meses*asis_cobrohora+0.3
+float; total_proyeccion=subtotal_investigadores+subtotal_asistentes+0.19
 
 print("El presupuesto total para la proyección es",total_proyeccion)
