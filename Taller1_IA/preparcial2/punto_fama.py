@@ -1,3 +1,4 @@
+import sys
 secreto = int(input("Juagdor A, ingrese el número secreto de dos dígitos:"))
 
 if secreto < 10 or secreto >99:
@@ -12,6 +13,7 @@ else :
 
     if intento == secreto:
         print("Usted ha encontrado en número secreto!")
+        sys.exit ()
     elif digito_intento1 == digito_intento2 and digito_intento2 == digito_secreto1:
         print('Usted tiene 2 puntos')
     elif digito_intento1 == digito_secreto1 or digito_intento2 == digito_secreto2:
@@ -26,6 +28,7 @@ else :
 
     if intento == secreto:
         print("Usted ha encontrado el número secreto!")
+        sys.exit ()
     elif digito_intento1 == digito_intento2 and digito_intento2 == digito_secreto1:
         print("Usted tiene 2 puntos")
     elif digito_intento1 == digito_secreto1 or digito_intento2 == digito_secreto2:
@@ -40,6 +43,7 @@ else :
 
     if intento == secreto:
         print("Usted ha encontrado el número secreto!")
+        sys.exit ()
     elif digito_intento1 == digito_intento2 and digito_intento2 == digito_secreto1:
         print("Usted tiene 2 puntos")
     elif digito_intento1 == digito_secreto1 or digito_intento2 == digito_secreto2:
@@ -54,6 +58,7 @@ else :
 
     if intento == secreto:
         print("Usted ha encontrado el número secreto!")
+        sys.exit ()
     elif digito_intento1 == digito_intento2 and digito_intento2 == digito_secreto1:
         print("Usted tiene 2 puntos")
     elif digito_intento1 == digito_secreto1 or digito_intento2 == digito_secreto2:
@@ -70,4 +75,5 @@ else :
         print("Usted ha encontrado el número secreto!")
     else:
         print("Juagdor B, ha perdido. El número era:",secreto)
+    
     
