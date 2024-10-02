@@ -1,3 +1,5 @@
+import random
+
 inventario = {
     0: {'modelo': 'Blusa A', 'existencias': 10},
     1: {'modelo': 'Blusa B', 'existencias': 15},
@@ -28,21 +30,29 @@ def realizar_compra():
     print("Ingrese su pedido (ID y cantidad). Ejemplo: 0 2 para 2 piezas del modelo con ID 0.")
     print("Escriba 'fin' para terminar el pedido.")
 
-    entrada = ""
-    while entrada.lower() != 'fin':
+    continuar = True
+    while continuar:
         entrada = input("ID y cantidad: ")
-        if entrada.lower() != 'fin':
-            try:
-                id_modelo, cantidad = map(int, entrada.split())
-                if id_modelo in inventario and 1 <= cantidad <= 5:
-                    if id_modelo in pedido:
-                        pedido[id_modelo] += cantidad
-                    else:
-                        pedido[id_modelo] = cantidad
-                else:
-                    print("ID de modelo no válido o cantidad fuera de rango (1-5).")
-            except ValueError:
-                print("Entrada no válida. Por favor, use el formato 'ID cantidad'.")
+        if entrada.lower() == 'fin':
+            continuar = False
+            continue
+        
+        # Verificar que la entrada tenga el formato correcto
+        partes = entrada.split()
+        if len(partes) != 2:
+            print("Entrada no válida. Por favor, use el formato 'ID cantidad'.")
+            continue
+        
+        id_modelo = int(partes[0])
+        cantidad = int(partes[1])
+
+        if id_modelo in inventario and 1 <= cantidad <= 5:
+            if id_modelo in pedido:
+                pedido[id_modelo] += cantidad
+            else:
+                pedido[id_modelo] = cantidad
+        else:
+            print("ID de modelo no válido o cantidad fuera de rango (1-5).")
 
     if len(pedido) > 10:
         print("No se pueden pedir más de 10 modelos diferentes.")
@@ -61,3 +71,4 @@ def realizar_compra():
 if __name__ == "__main__":
     mostrar_inventario()
     realizar_compra()
+
