@@ -4,14 +4,14 @@ import random
 def es_primo(n):
     if n < 2:
         return False
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n**0.5) + 1): # si n/i falso primo n/n 1/n
         if n % i == 0:
             return False
     return True
 
 # Función para lanzar dados
 def lanzar_dados(cantidad=2):
-    return [random.randint(1, 6) for _ in range(cantidad)]
+    return [random.randint(1, 6) for _ in range(cantidad)] # _No usar la variable y solo repetir el bloque de código 
 
 # Función para jugar una ronda
 def jugar_ronda():
@@ -79,7 +79,7 @@ def juego_prime_jack():
 
     print("Turno del Jugador 2")
     jugador2 = jugar_ronda()
-    print(f"Puntuación final del Jugador 2: {jugador2}\n")
+    print(f"Puntuación final del Jugador 2: {jugador2}\n") # \n salto de línea
 
     ganador = determinar_ganador(jugador1, jugador2)
     print(f"El ganador es el Jugador {ganador}")
