@@ -1,9 +1,9 @@
 def generar_lineas(linea0, linea1, linea2, max_num_existencias, max_num_modelos):
-    # Lógica para generar las líneas de inventario
-    pass
+ 
+
 
 def mostrar_inventario(linea0, linea1, linea2, max_num_modelos):
-    # Lógica para mostrar el inventario
+
     for i in range(max_num_modelos):
         print(f"Modelo {i}: Linea0 - {linea0[i]}, Linea1 - {linea1[i]}, Linea2 - {linea2[i]}")
 
